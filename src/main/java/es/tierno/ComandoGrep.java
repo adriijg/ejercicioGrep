@@ -1,6 +1,10 @@
 package es.tierno;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class ComandoGrep {
 
@@ -24,7 +28,7 @@ public class ComandoGrep {
         }
     }
 
-    private static Process crearProceso(String comando, String parametro) throws IOException {
+    public static Process crearProceso(String comando, String parametro) throws IOException {
         return new ProcessBuilder(comando, parametro).start();
     }
 
